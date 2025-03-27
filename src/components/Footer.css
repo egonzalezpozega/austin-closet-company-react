@@ -1,0 +1,46 @@
+/* src/components/Footer.css */
+.footer {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: auto; /* Pushes footer to bottom if content is short */
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-content p {
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-secondary);
+  }
+  
+  .footer-links {
+    margin-top: var(--spacing-sm);
+  }
+  
+  .footer-links a {
+    color: var(--text-secondary);
+    margin: 0 var(--spacing-sm);
+    font-size: 0.9rem;
+  }
+  
+  .footer-links a:hover {
+    color: var(--accent-primary);
+  }
+  
+  @media screen and (min-width: 768px) {
+    .footer-container {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+    .footer-links {
+      margin-top: 0;
+    }
+  }

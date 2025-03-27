@@ -1,0 +1,99 @@
+/* src/pages/ServicesPage.css */
+.services-page h1 + p { /* Style the intro paragraph */
+    margin-bottom: var(--spacing-xl);
+    font-size: 1.1rem;
+}
+
+.services-list {
+  display: grid;
+  gap: var(--spacing-xl); /* Space between service items */
+}
+
+.service-item {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  padding: var(--spacing-lg);
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack image and text vertically */
+  gap: var(--spacing-md);
+  overflow: hidden; /* Contain elements */
+}
+
+/* Optional: Style for service images */
+.service-image {
+  width: 100%;
+  max-height: 300px; /* Limit image height */
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: var(--spacing-md);
+}
+
+.service-details h2 {
+  color: var(--accent-primary);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.7rem; /* Slightly smaller than page H1 */
+}
+
+.service-details h3 {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.features-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0; /* Remove bottom margin if it's the last element */
+    display: grid; /* Use grid for features */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: var(--spacing-sm) var(--spacing-md);
+}
+
+.features-list li {
+  position: relative;
+  padding-left: calc(var(--spacing-sm) + 10px); /* Space for icon */
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.features-list li::before {
+  content: '•'; /* Bullet point */
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+
+/* Style the final CTA section */
+.consultation-cta {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.consultation-cta h3 {
+    color: var(--accent-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.consultation-cta p {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Media query if needed for image/text side-by-side */
+@media screen and (min-width: 960px) {
+    .service-item {
+       /* Example: side-by-side layout if images are used */
+       /* flex-direction: row; */
+    }
+    /* Adjust widths if using side-by-side layout */
+    /* .service-image { width: 40%; } */
+    /* .service-details { width: 60%; } */
+}

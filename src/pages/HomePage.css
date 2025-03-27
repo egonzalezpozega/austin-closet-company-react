@@ -1,0 +1,68 @@
+/* src/pages/HomePage.css */
+
+/* Services Overview */
+.services-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+  }
+  
+  .service-highlight {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-highlight:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-highlight h3 {
+    color: var(--accent-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .service-highlight p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+  
+  /* Mini Gallery */
+  .mini-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .mini-gallery img {
+    width: 100%;
+    height: 250px; /* Fixed height for uniformity */
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .mini-gallery img:hover {
+      transform: scale(1.03);
+  }
+  
+  /* General Section Styling */
+  .home-page .page-section h2 {
+      margin-bottom: var(--spacing-sm); /* Reduce space below h2 */
+  }
+  .home-page .page-section p {
+      margin-bottom: var(--spacing-lg); /* Increase space below paragraphs */
+  }
+  .home-page .page-section .button,
+  .home-page .page-section .button.secondary {
+      margin-top: var(--spacing-md);
+  }

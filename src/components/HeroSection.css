@@ -1,0 +1,88 @@
+/* src/components/HeroSection.css */
+.hero-container {
+    min-height: 75vh; /* Use min-height for flexibility */
+    height: calc(100vh - 80px); /* Full viewport minus navbar height */
+    max-height: 800px; /* Optional max height */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    background-position: center center; /* Center the image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+    color: #fff; /* Text on hero usually white for contrast */
+    padding: 0 var(--spacing-md); /* Add padding for smaller screens */
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.55); /* Slightly darker overlay */
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative; /* Sit on top of overlay */
+    z-index: 2;
+    max-width: 900px; /* Limit content width */
+  }
+  
+  
+  .hero-container h1 {
+    font-size: 3rem; /* Responsive font size */
+    margin-bottom: var(--spacing-sm);
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4); /* Subtle text shadow */
+  }
+  
+  .hero-container p {
+    margin-top: var(--spacing-sm);
+    font-size: 1.4rem; /* Responsive font size */
+    color: var(--text-primary);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+     text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Subtle text shadow */
+  }
+  
+  .hero-button {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md) var(--spacing-lg); /* Larger padding */
+    font-size: 1.1rem;
+    /* Styles inherited from .button in index.css */
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 960px) {
+    .hero-container h1 {
+      font-size: 2.5rem;
+    }
+    .hero-container p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero-container {
+        min-height: 60vh;
+        height: calc(90vh - 80px);
+    }
+    .hero-container h1 {
+      font-size: 2.2rem;
+    }
+    .hero-container p {
+      font-size: 1.1rem;
+    }
+    .hero-button {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 1rem;
+    }
+  }

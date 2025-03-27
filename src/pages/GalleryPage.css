@@ -1,0 +1,84 @@
+/* src/pages/GalleryPage.css */
+.gallery-page h1 + p { /* Style the intro paragraph */
+    margin-bottom: var(--spacing-xl);
+    font-size: 1.1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  /* Responsive grid: more columns on larger screens */
+  grid-template-columns: repeat(1, 1fr); /* Start with 1 column */
+  gap: var(--spacing-md);
+}
+
+/* Media queries for more columns */
+@media screen and (min-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+     gap: var(--spacing-lg);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px; /* Slightly larger radius */
+  position: relative;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35); /* Enhanced shadow */
+  cursor: pointer; /* Indicate interactivity */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 350px; /* Consistent height for grid items */
+  object-fit: cover;
+  display: block; /* Remove extra space below image */
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.4s ease; /* Smooth zoom and slight blur */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08); /* More noticeable zoom */
+  filter: brightness(0.9); /* Slightly dim image on hover to show caption */
+}
+
+/* Caption Overlay Style */
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0)); /* Gradient background */
+  color: var(--text-primary);
+  padding: var(--spacing-lg) var(--spacing-md) var(--spacing-sm); /* More padding at top */
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(20px); /* Start slightly lower */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  text-align: left; /* Align caption text left */
+  pointer-events: none; /* Allow hover on image behind caption */
+}
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Message for empty gallery */
+.empty-gallery-message {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background-color: var(--bg-secondary);
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    color: var(--text-secondary);
+}
+
+.empty-gallery-message code {
+    color: var(--accent-primary);
+}

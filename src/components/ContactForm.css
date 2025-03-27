@@ -1,0 +1,55 @@
+/* src/components/ContactForm.css */
+.contact-form {
+    width: 100%;
+    max-width: 600px; /* Limit form width */
+    margin: 0 auto; /* Center the form */
+  }
+  
+  .form-group {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-family: inherit; /* Use the main font */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.3); /* Subtle focus ring */
+  }
+  
+  .form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 120px;
+  }
+  
+  .form-submit-button {
+    width: 100%; /* Make button full width */
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 1.1rem;
+  }
+  
+  .form-status {
+      margin-top: var(--spacing-md);
+      color: var(--accent-primary);
+      text-align: center;
+      font-weight: 500;
+  }

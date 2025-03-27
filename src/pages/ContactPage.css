@@ -1,0 +1,88 @@
+/* src/pages/ContactPage.css */
+.contact-page h1 + p { /* Style the intro paragraph */
+    margin-bottom: var(--spacing-xl);
+    font-size: 1.1rem;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column default */
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
+}
+
+@media screen and (min-width: 960px) {
+  .contact-content {
+    grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+  }
+}
+
+.contact-details h2,
+.contact-form-container h2 {
+  margin-bottom: var(--spacing-md);
+  color: var(--accent-primary);
+}
+
+.contact-details ul {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--spacing-md);
+}
+
+.contact-details li {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.contact-details li strong {
+  color: var(--text-primary);
+  display: block; /* Put label on its own line */
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+}
+
+.contact-details a {
+    color: var(--accent-primary); /* Ensure links are visible */
+}
+.contact-details a:hover {
+    color: var(--link-hover);
+}
+
+/* Map Container Styles (Optional) */
+.map-container {
+  margin-top: var(--spacing-lg);
+  border-radius: 8px;
+  overflow: hidden; /* Clip the map embed */
+  border: 1px solid var(--border-color);
+  height: 300px; /* Adjust height as needed */
+  background-color: var(--bg-secondary); /* Placeholder bg */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-container iframe {
+    filter: grayscale(1) invert(0.9) contrast(0.8); /* Simple dark theme filter for map */
+}
+
+.map-container p { /* Placeholder text style */
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+
+.contact-form-container {
+    /* Styles for the form container itself, if needed */
+}
+
+.form-note {
+    margin-top: var(--spacing-md);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.5;
+}
+.form-note strong {
+    color: var(--accent-primary);
+}
